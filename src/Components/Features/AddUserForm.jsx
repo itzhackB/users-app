@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -15,16 +15,25 @@ import isEmpty from '../../utils/isEmpty';
 
 
 const AddUserForm = ({ isOpen, setIsOpen }) => {
-  const [createUser, setCreateUser] = useState({})
-  const dispatch = useDispatch()
+  const [createUser, setCreateUser] = useState({});
+  const dispatch = useDispatch();
+  const users = useSelector((state) => state.users);
 
   const addUserAprrove = () => {
     if (isEmpty(createUser)) {
       alert('Please Fill All Fields')
       return
     }
+    if(isEmailExist(createUser.email)){
+      alert("Email already exist")
+        return
+    }
     setIsOpen(!isOpen)
     dispatch(addUser(createUser))
+  }
+
+  const isEmailExist = (email) => {
+    return users.map(user => user.email === email ? true : false)
   }
   return (
     <Dialog open={isOpen} >
