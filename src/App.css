@@ -1,0 +1,353 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fdfdfd
+    url(https://images.unsplash.com/photo-1566041510394-cf7c8fe21800?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1834&q=80)
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: scroll;
+  background-position-x: right;
+}
+
+.user-list-app {
+  height: auto;
+}
+
+header {
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  padding: 25px 30px;
+  -webkit-box-shadow: 0px 14px 14px -18px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 14px 14px -18px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 14px 14px -18px rgba(0, 0, 0, 0.75);
+}
+
+h1 {
+  color: rgb(75, 75, 75);
+}
+
+h2 {
+  color: #0b578a;
+  margin: 18px auto 10px auto;
+  font-size: 22px;
+}
+
+.paragraph {
+  margin: 10px auto 10px auto;
+  line-height: 26px;
+}
+
+/* ---------- Unorder List ---------- */
+ul {
+  position: relative;
+}
+
+ul li {
+  list-style: none;
+  position: relative;
+  padding: 12px;
+  color: #252525;
+  font-size: 16px;
+  z-index: 2;
+}
+
+.grid-container {
+  width: 100%;
+  margin: auto;
+  margin-top: 20px;
+  display: grid;
+  height: auto;
+  align-content: space-evenly;
+  grid-template-columns: auto;
+  transition: width 1.66s ease-out;
+}
+
+/* ---------- Fade In Effect ---------- */
+.fade-in {
+  animation: fadeIn ease 2s;
+  -webkit-animation: fadeIn ease 2s;
+  -moz-animation: fadeIn ease 2s;
+  -o-animation: fadeIn ease 2s;
+  -ms-animation: fadeIn ease 2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ---------- User ---------- */
+.user {
+  margin: auto 15%;
+  padding: 0px 0px 25px 25px;
+  font-size: 18px;
+  line-height: 26px;
+  position: relative;
+}
+
+.profile-image {
+  float: left;
+  background: #fff;
+  border-radius: 0px 30px 0px 30px;
+  -moz-border-radius: 0px 30px 0px 30px;
+  -webkit-border-radius: 0px 30px 0px 30px;
+  border: 7px #ffffff solid;
+}
+
+/* ---------- Profile Image Drop Shadow ---------- */
+.shadow {
+  position: relative;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.shadow:before,
+.shadow:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  -moz-border-radius: 100px / 10px;
+  border-radius: 100px / 10px;
+}
+
+.shadow:after {
+  right: 10px;
+  left: auto;
+  -webkit-transform: skew(8deg) rotate(3deg);
+  -moz-transform: skew(8deg) rotate(3deg);
+  -ms-transform: skew(8deg) rotate(3deg);
+  -o-transform: skew(8deg) rotate(3deg);
+  transform: skew(8deg) rotate(3deg);
+}
+
+.user-info {
+  margin-left: 160px;
+  margin-top: 20px;
+}
+
+.male {
+  font-size: 25px;
+  color: #125696;
+  margin-right: 10px;
+}
+
+.female {
+  font-size: 25px;
+  color: rgb(223, 53, 89);
+  margin-right: 10px;
+}
+
+.email {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+i {
+  margin-right: 10px;
+}
+
+.location {
+  font-size: 16px;
+}
+
+.country-flag {
+  width: 35px;
+  height: auto;
+}
+
+.horizental-line {
+  position: relative;
+  margin-top: 13px;
+}
+
+/* ---------- Messages ---------- */
+.message {
+  text-align: center;
+  font-size: 19px;
+  font-weight: bold;
+  margin: 0;
+  padding: 5vw;
+  width: 100vw;
+  height: 100vh;
+}
+
+.loading {
+  color: rgb(17, 87, 17);
+}
+
+.error {
+  color: rgb(206, 22, 22);
+}
+
+.list-empty {
+  color: rgb(66, 61, 61);
+  font-size: 18px;
+}
+
+.spinning-circle {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  height: 5vw;
+  width: 5vw;
+  animation: rotate 1s infinite linear;
+  border: 0.7vw solid #63636b;
+  border-right-color: transparent;
+  border-radius: 50%;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- Button Style ---------- */
+
+
+.content {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+
+/* ---------- Media Queries ---------- */
+@media only screen and (max-width: 1024px) {
+  header {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .paragraph {
+    font-size: 15px;
+  }
+
+  .grid-container {
+    width: 95%;
+    margin-top: 15px;
+  }
+
+  .user {
+    margin: 20px 0px 0px 0px;
+    margin: 2% 5%;
+    padding: 0;
+  }
+
+  .content {
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-container {
+    width: 100%;
+    margin-top: 0;
+    padding-top: 10px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+  h2 {
+    font-size: 19px;
+  }
+
+  .email {
+    margin-top: 0px;
+  }
+
+  .location {
+    font-size: 14px;
+  }
+
+  .horizental-line {
+    margin-top: 10px;
+  }
+
+  .user-name {
+    font-size: 16px;
+  }
+
+  .spinning-circle {
+    height: 9vw;
+    width: 9vw;
+  }
+
+  .message {
+    font-size: 15px;
+    padding: 5vw;
+  }
+  
+}
